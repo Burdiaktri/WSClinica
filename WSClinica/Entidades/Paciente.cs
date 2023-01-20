@@ -17,6 +17,6 @@ namespace WSClinica.Entidades
        
         public int IdMedico { get; set; }
         [ForeignKey("IdMedico")]
-        public Medico medico { get; set; }
+        public Medico Medico { get; set; }
     }
 }

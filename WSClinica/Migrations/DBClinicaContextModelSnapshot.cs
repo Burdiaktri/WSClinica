@@ -152,7 +152,7 @@ namespace WSClinica.Migrations
             modelBuilder.Entity("WSClinica.Entidades.Medico", b =>
                 {
                     b.HasOne("WSClinica.Entidades.Especialidad", "Especialidad")
-                        .WithMany()
+                        .WithMany("Medicos")
                         .HasForeignKey("EspecialidadId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -160,7 +160,7 @@ namespace WSClinica.Migrations
 
             modelBuilder.Entity("WSClinica.Entidades.Paciente", b =>
                 {
-                    b.HasOne("WSClinica.Entidades.Medico", "medico")
+                    b.HasOne("WSClinica.Entidades.Medico", "Medico")
                         .WithMany("Pacientes")
                         .HasForeignKey("IdMedico")
                         .OnDelete(DeleteBehavior.Cascade)
